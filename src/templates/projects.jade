@@ -1,0 +1,12 @@
+extends base
+block content
+  h1= title
+  include partials/nav
+  div!= contents
+  h2 PROJECTS
+  each project in projects
+    div
+      h5= project.title
+      p= project.description
+
+  include partials/footer
