@@ -8,6 +8,7 @@ var gulp = require('gulp')
   , markdown = require('metalsmith-markdown')
   , templates = require('metalsmith-templates')
   , permalinks = require('metalsmith-permalinks')
+  , excerpts = require('metalsmith-excerpts')
   , assign = require('lodash.assign')
   , rimraf = require('rimraf')
   , express = require('express')
@@ -31,13 +32,15 @@ gulp.task('build', ['clean'], function() {
         .use(markdown({
           smartypants: true
         }))
+        .use(excerpts())
         .use(templates({
           engine: 'jade',
           directory: 'src/templates'
         }))
         .use(permalinks({
-          pattern: ':permalink'
+          pattern: ':collection/:permalink'
         }))
+
     )
     .pipe(gulp.dest('build'));
 

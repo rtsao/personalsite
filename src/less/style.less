@@ -1,18 +1,42 @@
 @import (inline) "../../node_modules/normalize.css/normalize.css";
 @import "animations";
+@import "colors";
 
 body {
   font-family: "inconsolata", sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.main {
-  flex: 1;
+  width: 680px;
+  margin: 0 auto;
 }
 
 .landing {
   text-align: center;
   .fadeInUp;
+}
+
+.project-links {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+
+  > li {
+    display:inline;
+    margin-left: 14px;
+
+    &:first-of-type {
+      margin-left: 0px;
+    }
+
+    > a {
+      color: @blue;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      border: 2px solid @blue;
+
+    }
+  }
+
 }

@@ -1,12 +1,19 @@
-extends base
+extends plain
 block content
-  h1= title
   include partials/nav
-  div!= contents
-  h2 PROJECTS
-  each project in projects
-    div
-      h5= project.title
-      p= project.description
+  section.main!= contents
+    each project in projects
+      article
+        a(href= project.permalink)
+          h6= project.kicker
+          h5= project.title
+        ul
+          each tag in project.tags
+            li= tag
+        != project.excerpt
+        ul.project-links
+          li: a(href=project.permalink) Project
+          li: a(href=project.github) GitHub
+
 
   include partials/footer

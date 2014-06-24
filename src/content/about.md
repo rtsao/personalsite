@@ -1,6 +1,6 @@
 ---
 title: About Page
-template: index.jade
+template: plain.jade
 permalink: about
 ---
 
