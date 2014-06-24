@@ -1,0 +1,16 @@
+.inline-list-unstyled {
+  list-style: none;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+.margin-left-except-first(@margin) {
+  margin-left: @margin;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
