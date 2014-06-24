@@ -2,7 +2,5 @@ extends base
 block content
   include partials/header
   section.main
-    section.landing
-      span Hello,
-      span I’m a software engineer &amp; designer from Portland, Oregon specializing in web and mobile development.
-  include partials/footer
+    section.landing!= contents
+    section.projects

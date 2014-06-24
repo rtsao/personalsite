@@ -4,6 +4,6 @@ template: projects.jade
 permalink: projects
 ---
 
-Yolo
+Projects
 ===
 

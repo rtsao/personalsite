@@ -3,24 +3,6 @@ title: Home
 template: index.jade
 ---
 
-Some cool content here YAY
+Hello, I’m a software engineer & designer from Portland, Oregon specializing in web and mobile development.
 
-"cool stuff here"
-
-Ultimate swag attack... or is it?
-
-Yep--that's a real dash
-
-yoloswag
-===
-
-# swagitron
-
-## mcgee
-
-- yee
-- yee
-- yee
-- yee
-
-tron
+Read more [about me](/about) or check out some recent projects below:
