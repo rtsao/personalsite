@@ -3,13 +3,26 @@
 @import "animations";
 @import "colors";
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: "inconsolata", sans-serif;
-  //display: flex;
-  //flex-direction: column;
-  min-height: 100vh;
   width: 680px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+footer {
+  font-size: 13px;
+  padding: 0 0 24px 0;
 }
 
 a {
@@ -21,8 +34,22 @@ p {
   line-height: 24px;
 }
 
+h4 {
+  margin: 48px 0 0 0;
+}
+
+img {
+  width: 100%;
+}
+
 .landing {
-  .fadeInUp;
+  &:extend(.fadeInUp);
+}
+
+.projects {
+  &:extend(.fadeInUp);
+  animation-delay: 500ms;
+  animation-fill-mode: both;
 }
 
 header {
@@ -59,9 +86,85 @@ header {
   }
 }
 
+.index {
+  nav li {
+    &:extend(.fadeInDown);
+    animation-fill-mode: both;
+    .stagger-animation(4, 120ms);
+  }
+
+  h1 {
+    &:extend(.fadeInDown);
+  }
+  
+}
+
+.project {
+  margin: 100px 0 120px 0;
+
+  img {
+    width: 100%;
+    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.15);
+  }
+
+  .kicker {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: @blue;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .title {
+    font-weight: normal;
+    font-size: 24px;
+    color: #000;
+    margin: 4px 0 12px 0;
+  }
+
+  .tags {
+    &:extend(.inline-list-unstyled all);
+    font-size: 11px;
+
+    > li {
+      .margin-left-except-first(6px);
+      color:#fff;
+      padding: 5px 7px;
+    }
+
+    .JavaScript {
+      background-color: #F5A623;
+    }
+
+    .WebGL {
+      background-color: #7ED321;
+    }
+
+    .Mathematica {
+      background-color: #9B9B9B;
+    }
+  }
+}
+
+.project-grid {
+  .project {
+    margin: 30px 0 30px 0;
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px 0 0;
+
+    &:nth-child(2n) {
+      padding: 0 0 0 30px;
+    }
+  }
+}
+
 .project-links {
   &:extend(.inline-list-unstyled all);
   font-size: 14px;
+  margin-top: 24px;
 
   > li {
     .margin-left-except-first(14px);

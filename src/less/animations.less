@@ -1,3 +1,11 @@
+.stagger-animation(@n, @ms, @i: 1) when (@i =< @n) {
+  &:nth-child(@{i}) {
+    animation-delay: @i * @ms;
+  }
+
+  .stagger-animation(@n, @ms, (@i + 1));
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -10,6 +18,22 @@
   }
 }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fadeInUp {
   animation: fadeInUp 1s ease;
+}
+
+.fadeInDown {
+  animation: fadeInDown 1s ease;
 }
