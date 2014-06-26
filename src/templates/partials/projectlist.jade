@@ -1,13 +1,12 @@
+include ../mixins/projectlinks
+include ../mixins/tags
+
 each project in projects
   article.project
-    h3.kicker= project.kicker
+    h3.project-kicker= project.kicker
     a(href='/'+project.path)
-      h2.title= project.title
-      img(src=project.image)
-    ul.tags
-      each tag in project.tags
-        li(class=tag)= tag
+      h2.project-title= project.title
+      img.screenshot(src=project.image)
+      +tags(project.tags)
     != project.excerpt
-    ul.project-links
-      li: a(href='/'+project.path) Project
-      li: a(href=project.github) GitHub
+    +projectlinks(project)

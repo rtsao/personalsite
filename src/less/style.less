@@ -34,12 +34,21 @@ p {
   line-height: 24px;
 }
 
+h3 {
+  margin: 18px 0 0 0;
+}
+
 h4 {
   margin: 48px 0 0 0;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.screenshot {
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.15);
 }
 
 .landing {
@@ -99,52 +108,29 @@ header {
   
 }
 
+
+
 .project {
   margin: 100px 0 120px 0;
+}
 
-  img {
-    width: 100%;
-    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.15);
-  }
-
-  .kicker {
+.project-kicker {
+    margin-bottom: 0px;
     font-size: 14px;
     text-transform: uppercase;
     color: @blue;
     font-weight: normal;
-    margin: 0;
-  }
 
-  .title {
-    font-weight: normal;
-    font-size: 24px;
-    color: #000;
-    margin: 4px 0 12px 0;
-  }
-
-  .tags {
-    &:extend(.inline-list-unstyled all);
-    font-size: 11px;
-
-    > li {
-      .margin-left-except-first(6px);
-      color:#fff;
-      padding: 5px 7px;
-    }
-
-    .JavaScript {
-      background-color: #F5A623;
-    }
-
-    .WebGL {
-      background-color: #7ED321;
-    }
-
-    .Mathematica {
-      background-color: #9B9B9B;
-    }
-  }
 }
+
+.project-title {
+  font-weight: normal;
+  font-size: 24px;
+  color: #000;
+  margin: 4px 0 12px 0;
+}
+
+
 
 .project-grid {
   .project {
@@ -176,4 +162,27 @@ header {
     }
   }
 
+}
+
+.project-tags {
+  &:extend(.inline-list-unstyled all);
+  font-size: 11px;
+
+  > li {
+    .margin-left-except-first(6px);
+    color:#fff;
+    padding: 5px 7px;
+  }
+
+  .JavaScript {
+    background-color: #F5A623;
+  }
+
+  .WebGL {
+    background-color: #7ED321;
+  }
+
+  .Mathematica {
+    background-color: #9B9B9B;
+  }
 }

@@ -1,0 +1,8 @@
+mixin projectlinks (project)
+  ul.project-links
+    if project.path
+      li: a(href='/'+project.path) Learn More
+    if project.demo
+      li: a(href=project.demo) Demo
+    if project.github
+      li: a(href=project.github) Source
