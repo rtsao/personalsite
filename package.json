@@ -25,6 +25,8 @@
     "gulp-autoprefixer": "0.0.7",
     "metalsmith-excerpts": "^1.0.0",
     "marked": "^0.3.2",
-    "del": "^0.1.0"
+    "del": "^0.1.0",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-cache": "^0.2.0"
   }
 }
