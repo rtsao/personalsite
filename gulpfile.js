@@ -10,11 +10,11 @@ var gulp = require('gulp')
   , permalinks = require('metalsmith-permalinks')
   , excerpts = require('metalsmith-excerpts')
   , assign = require('lodash.assign')
-  , rimraf = require('rimraf')
+  , del = require('del')
   , express = require('express')
 
-gulp.task('clean', function(cb){
-  rimraf('build/(!(css))', cb);
+gulp.task('clean', function(cb) {
+  del(['build/**/*','!build/css/**'], cb);
 });
 
 gulp.task('build', ['clean'], function() {
@@ -27,7 +27,7 @@ gulp.task('build', ['clean'], function() {
     .pipe(
       gulpsmith(__dirname)
         .use(collections({
-          projects:{}
+          projects:{reverse: true}
         }))
         .use(markdown({
           smartypants: true
@@ -38,7 +38,7 @@ gulp.task('build', ['clean'], function() {
           directory: 'src/templates'
         }))
         .use(permalinks({
-          pattern: ':collection/:permalink'
+          pattern: ':collection/:slug'
         }))
 
     )
