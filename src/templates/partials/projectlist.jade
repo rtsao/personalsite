@@ -1,0 +1,13 @@
+each project in projects
+  article.project
+    h3.kicker= project.kicker
+    a(href='/'+project.path)
+      h2.title= project.title
+      img(src=project.image)
+    ul.tags
+      each tag in project.tags
+        li(class=tag)= tag
+    != project.excerpt
+    ul.project-links
+      li: a(href='/'+project.path) Project
+      li: a(href=project.github) GitHub

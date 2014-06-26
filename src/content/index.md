@@ -1,8 +1,9 @@
 ---
 title: Home
 template: index.jade
+slug: index
 ---
 
-Hello, I’m a software engineer & designer from Portland, Oregon specializing in web and mobile development.
+Hello, I’m a software engineer & designer from Portland, Oregon who specializes in web and mobile development.
 
-Read more [about me](/about) or check out some recent projects below:
+[Get in touch](/contact) or check out some recent projects below:

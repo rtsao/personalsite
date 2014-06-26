@@ -2,15 +2,5 @@ extends plain
 block content
   include partials/header
   section.main!= contents
-    each project in projects
-      article
-        a(href= project.permalink)
-          h6= project.kicker
-          h5= project.title
-        ul
-          each tag in project.tags
-            li= tag
-        != project.excerpt
-        ul.project-links
-          li: a(href=project.permalink) Project
-          li: a(href=project.github) GitHub
+    section.project-grid
+      include partials/projectlist
