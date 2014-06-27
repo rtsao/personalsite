@@ -7,6 +7,6 @@ each project in projects
     a(href='/'+project.path)
       h2.project-title= project.title
       img.screenshot(src=project.image)
-      +tags(project.tags)
+    +tags(project.tags)
     != project.excerpt
     +projectlinks(project)
