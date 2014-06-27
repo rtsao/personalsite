@@ -49,7 +49,7 @@ gulp.task('build', function() {
 
 gulp.task('less', function() {
   gulp.src(['src/less/style.less'])
-    .pipe(less())
+    .pipe(less({compress: true}))
     .pipe(prefix('last 2 versions'))
     .pipe(gulp.dest('build/css'))
 })
