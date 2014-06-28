@@ -6,7 +6,7 @@ block content
   include partials/header
   h3.project-kicker= kicker
   h2.project-title= title
-  a(href=image): img.screenshot(src=image)
+  a(href=link || demo || image): img.screenshot(src=image)
   +tags(tags)
-  +projectlinks({ demo: demo, github: github })
+  +projectlinks({ demo: demo, github: github, link: link })
   section.main!= contents

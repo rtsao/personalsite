@@ -4,5 +4,7 @@ mixin projectlinks (project)
       li: a(href='/'+project.path) Learn More
     if project.demo
       li: a(href=project.demo) Demo
+    if project.link
+      li: a(href=project.link) Visit
     if project.github
       li: a(href=project.github) Source
