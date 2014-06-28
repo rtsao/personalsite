@@ -16,17 +16,15 @@ This app demonstrates the symmetry groups of various polyhedra, more specificall
 
 #### How It Works
 
-The symmetries of a given polyhedron form a group. For example, the set of all rotational symmetries of a tetrahedron is isomorphic to the alternating group A4, the set of even permutations on four objects. Intuitively, the tetrahedron has four vertices.
-
-![Cubic rotational symmetry](/img/diagram_tetrahedron.png)
+The symmetries of a given polyhedron form a group. For example, the set of all rotational symmetries of a tetrahedron is isomorphic to the [alternating group A4](http://en.wikipedia.org/wiki/Alternating_group), the set of even permutations on four objects. Intuitively, the tetrahedron has four vertices.
 
 ##### Calculating Matrix Transformations
 
 To make use of these symmetry groups in WebGL, I needed to represent them as a set of 4x4 matrix transformations. For each of the Platonic solids, I used Mathematica to calculate the entire symmetry group as 4x4 matrices. Note that the groups for the cube and octahedron as well as the dodecahedron and icosahedron are the same because they are duals of each other.
 
-##### Rendering The Sphere
+##### App Technology
 
-I use three.js along with custom fragment and vertex shaders to paint the sphere using group averaging. Dat.gui is also used for the settings menu that allows the user to select the symmetry group as well as change the final output.
+I use [three.js](https://github.com/mrdoob/three.js/) along with custom fragment and vertex shaders to paint the sphere using group averaging. [dat.GUI](https://code.google.com/p/dat-gui/) is also used for the settings menu that allows the user to select the symmetry group among other options. Users can influence the pattern through texture shifting as well as adjustment of color saturation. An output function is provided so users can easily download and save the screen output.
 
 ##### Group Averaging
 
